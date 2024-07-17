@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Page</title>
+
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/post.css"/>
+
+    <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <script src="../scripts/post.js"></script>
+
+</head>
+<body>
+    <div class="containerhead">
+        <div class="header-left">
+            <h1 class="heading">ScriBBler</h1>
+            <p class="subHeading">Explore, Imagine, Create</p>
+         </div>
+    
+         <div class="header-right">
+            <button type="button" class="btn btn-primary"  id="signinbutton" data-bs-toggle="modal" data-bs-target="#signUp">SignUp</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">SignIn</button>
+         </div>
+     </div>
+    <div id="signUp" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Get Started</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">UserName</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your User Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Re Enter Your Password" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" id="SignUpButton">Sign Up</button>
+              <div>Already a member? <span> Sign In</span></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="signIn" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Welcome Back!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">UserName</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your User Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Password" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" id="SignUpButton">Sign In</button>
+              <div>Not a member? <span> Sign Up</span></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="postTitle">
+        <h3>The Legacy of Jimi Hendrix</h3>
+    </div>
+    <div class="authorName">
+        <h5 style="font-family: Roboto Mono, monospace;
+        font-optical-sizing: auto;
+        font-weight: 200;">Srishti Gupta</h5>
+        <button type="button" class="btn btn-danger" id="edit" onclick="postEdit()" style="float: right;">Edit <i class="fa fa-edit"></i></button>
+    </div>
+    <p id="paraText">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1]
+        Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever
+        ventured before. His boundless drive, technical ability and creative application of such effects as
+        distortion forever transformed the sound of rock and roll. While creating his unique musical voice
+        and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock,
+        American folk music, 1950s rock and roll, psychedelic and jazz. Hendrix favored over driven
+        amplifiers with high volume and gain.[119] He was instrumental in developing the previously
+        undesirable technique of guitar amplifier feedback, and helped to popularize use of the wah-wah
+        pedal in mainstream rock.[348] He rejected the standard barre chord fretting technique used by most
+        guitarists in favor of fretting the low 6th string root notes with his thumb.[349] He applied this
+        technique during the beginning bars of "Little Wing", which allowed him to sustain the root note of
+        chords while also playing melody. This method has been described as piano style, with the thumb
+        playing what a pianist's left hand would play and the other fingers playing melody as a right
+        hand.[350] Having spent several years fronting a trio, he developed an ability to play rhythm chords
+        and lead lines together, giving the audio impression that more than one guitarist was
+        performing.[351][nb 41] He was the first artist to incorporate stereophonic phasing effects in rock
+        music recordings.[354] Holly George-Warren of Rolling Stone commented: "Hendrix pioneered the use of
+        the instrument as an electronic sound source. Players before him had experimented with feedback and
+        distortion, but Hendrix turned those effects and others into a controlled, fluid vocabulary every
+        bit as personal as the blues with which he began."[3][nb 42] Aledort wrote: "In rock guitar, there
+        are but two eras � before Hendrix and after Hendrix."
+    </p>
+    <div class="likeBlogButton">
+        <button type="button" class="btn btn-danger btn-lg" id="likeBlog" onclick="postLiked()">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i> Like
+        </button>
+        <h5 style="font-style: bold;font-size: 18px;" id="likeCount">Be the first one to like this!
+        </h5>
+    </div>
+    <br>
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="userComments" style="height: 100px; width: 80%;"></textarea>
+        <label for="floatingTextarea2">Leave a comment...</label>
+    </div>
+    <br>
+    <div class="likeBlogButton">
+        <button type="button" class="btn btn-danger btn-lg" id="addList" onclick="addComments(userComments)">Comment</button>
+    </div>
+    <br>
+    <h2 style="font-style: bold;font-size: 18px;">All Comments</h2>
+    <div id="viewComments">
+        <div id="addEventNames"></div>
+    </div>
+</body>
+</html>

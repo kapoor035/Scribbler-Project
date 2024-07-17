@@ -1,0 +1,27 @@
+.heading {
+    font-family: "Montez", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.subHeading {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+.containerhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#signinbutton{
+    margin-right: 4px;
+}
+#SignUpButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    padding: 15px;
+}
